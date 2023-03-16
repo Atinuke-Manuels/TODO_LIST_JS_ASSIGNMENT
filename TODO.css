@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+
+#bodyElement{
+    color: rgb(175, 100, 112);
+    background-image: url(priscilla-du-preez-6tCiSN8LX7w-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+#header{
+    font-size: 2.2em;
+    margin-bottom: 0.5rem;
+}
+
+#inputField{
+    border: none;
+    background: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: rgb(143, 51, 66);
+    flex: 1 1 0%;
+    background-color:rgb(219, 188, 193) ;
+    font-size: 1.25rem;
+}
+
+#addMe, #footerButton{
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color:rgb(177, 90, 105);
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+#footer{
+    margin-top: 1rem;
+    font-size: 1.2em;
+}
+
+#footerButton{
+    padding: 3px;
+    font-size:1rem;
+    font-weight: 300;
+    margin-left: 2rem;
+}
