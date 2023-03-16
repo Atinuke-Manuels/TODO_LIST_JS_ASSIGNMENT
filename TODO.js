@@ -5,7 +5,7 @@ let newListItem = document.createElement('div');
 let addNewButton = document.getElementById("addMe");
 let unorderedList = document.getElementById("todoList");
 let footerButton = document.getElementById("footerButton");
-// unorderedList.innerHTML = localStorage.getItem("value"); 
+unorderedList.innerHTML = JSON.parse(localStorage.getItem("value"));
 newListItem.innerHTML = JSON.parse(localStorage.getItem("value"));
 
 //Create functions to add, delete and clear all.
@@ -24,30 +24,18 @@ addNewButton.addEventListener('click', function(e){
 
     // newListItem.style.border = "2px solid white";
     //style the new div you created
-    newListItem.style = "margin: 0 auto; display: flex; max-width: 75%; justify-content: space-between;"
+    newListItem.style = "margin: 0 auto; display: flex; max-width: 75%; justify-content: space-between; padding: 0.6rem 0;"
 
     //assign to local storage so that when your page is refreshed no data is lost.
+    
     localStorage.setItem('value', JSON.stringify(task));
     newListItem.innerHTML = JSON.parse(localStorage.getItem("value"));
-    
 
     //add the new list items ontop of your list using the prepend object method
     unorderedList.prepend(newListItem);
     
     //ensure that your input field is refreshed after the add button is clicked.
     inputField.value = "";
-  
-    
-    //To strike out a task
-    // newListItem.addEventListener('click', function(){
-    //     newListItem.style.textDecoration = "line-through";
-    // })
-
-    // //To remove the strike
-    // newListItem.addEventListener('dblclick', function(){
-    //     newListItem.style.textDecoration = "none";
-    // })
-
 
     //display the current date. Remember that it starts from zero, Jan= 0 and Dec = 11;
     const dateDisplay = document.createElement('span');
@@ -67,7 +55,9 @@ addNewButton.addEventListener('click', function(e){
     editButton.classList.add("Edit");
     editButton.innerHTML = "Edit Task";
 
+    //The concept of using parentNode gives access to individual input.
     editButton.addEventListener('click', function(e){
+        let newListItem = editButton.parentNode;
         newListItem.contentEditable = true;
     });
 
@@ -85,20 +75,32 @@ addNewButton.addEventListener('click', function(e){
 
     //create a function that allows you delete a task
     deleteButton.addEventListener('click', function(e){
+        if(confirm('Are you sure you want to delete this task?')){
     let newListItem = deleteButton.parentNode;
     newListItem.parentNode.removeChild(newListItem);
+        }
     })
 
     footerButton.addEventListener('click', function(){
         newListItem = "";
         unorderedList.innerText = newListItem;
+
     })
 
+  
 
 })
 
 
+  //To strike out a task
+    // newListItem.addEventListener('click', function(){
+    //     newListItem.style.textDecoration = "line-through";
+    // })
 
+    // //To remove the strike
+    // newListItem.addEventListener('dblclick', function(){
+    //     newListItem.style.textDecoration = "none";
+    // })
 
 
 
