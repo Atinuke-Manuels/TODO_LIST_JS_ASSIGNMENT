@@ -57,6 +57,7 @@ addNewButton.addEventListener('click', function(e){
 
     //The concept of using parentNode gives access to individual input.
     editButton.addEventListener('click', function(e){
+        confirm("Do you really want to edit this task? go ahead by clicking on the task.");
         let newListItem = editButton.parentNode;
         newListItem.contentEditable = true;
     });
