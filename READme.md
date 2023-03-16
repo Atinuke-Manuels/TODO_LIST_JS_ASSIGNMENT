@@ -1,4 +1,5 @@
-# The task involved creating a TODO list from scratch using HTML, CSS AND JavaScript.
+# The task 
+## create a TODO list from scratch using HTML, CSS AND JavaScript.
 
 ## I was able to successfull create my TODO list which has the functionalities stated below
  - Input new Task
@@ -8,5 +9,5 @@
  - Delete task
  - Clear All tasks
 
-## I was also suppose to ensure the data was saved to local storage so that when the page is refreshed the tasks are still visible. Unfortunately I am currently unable to acheive it perfectly.
+### I was also suppose to ensure the data was saved to local storage so that when the page is refreshed the tasks are still visible. Unfortunately I am currently unable to acheive this perfectly.
 
