@@ -1,3 +1,4 @@
+window.onload = () => {
 //declare all variables needed for all functions we are going to use
 let inputField = document.getElementById("inputField");
 inputField.classList.add("text");
@@ -91,7 +92,7 @@ addNewButton.addEventListener('click', function(e){
   
 
 })
-
+}
 
   //To strike out a task
     // newListItem.addEventListener('click', function(){
