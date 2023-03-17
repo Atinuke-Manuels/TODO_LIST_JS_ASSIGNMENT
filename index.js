@@ -43,7 +43,7 @@ addNewButton.addEventListener('click', function(e){
     dateDisplay.classList.add('date');
     let date = new Date();
     year = date.getFullYear();
-    month = date.getMonth();
+    month = date.getMonth() + 1;
     day = date.getDate();
     dateDisplay.innerText = ' Created at ' + day + '-' + month + '-' + year;
 
